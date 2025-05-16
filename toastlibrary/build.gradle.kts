@@ -50,21 +50,21 @@ dependencies {
     implementation(libs.androidx.activity.compose)
 }
 
-afterEvaluate {
-    extensions.configure<PublishingExtension>("publishing") {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.androiddev.toastlibrary"
-                artifactId = "toastlibrary"
-                version = "1.0.0"
-            }
-        }
-        repositories {
-            maven {
-                name = "localRepo"
-                url = uri("${rootProject.buildDir}/repo")
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    extensions.configure<PublishingExtension>("publishing") {
+//        publications {
+//            create<MavenPublication>("release") {
+//                from(components["release"])
+//                groupId = "com.androiddev.toastlibrary"
+//                artifactId = "toastlibrary"
+//                version = "1.0.0"
+//            }
+//        }
+//        repositories {
+//            maven {
+//                name = "localRepo"
+//                url = uri("${rootProject.buildDir}/repo")
+//            }
+//        }
+//    }
+//}
